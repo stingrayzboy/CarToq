@@ -65,3 +65,5 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+/db/vehicles_list_1.csv
+/db/vehicles_list_2.csv
