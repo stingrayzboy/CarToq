@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Application is a dockerzied application therefore you need to have docker installed and running to preview.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version :- 2.6.5 
 
-* System dependencies
+## First things first
 
-* Configuration
+After cloning the application make sure to run ```docker-compose up -d``` this will get all the dependencies resolved and start the application.
 
-* Database creation
+## How to use the console
 
-* Database initialization
+Since the application is dockerzied and user docker-compose you need to learn a few commands
 
-* How to run the test suite
+Traditional ```rails c``` doesnt work.
 
-* Services (job queues, cache servers, search engines, etc.)
+You need to run ```docker-compose exec website sh``` to login to the container shell and run ```rails c```
 
-* Deployment instructions
+## Productionization in Mind
 
-* ...
+This app is currently only in development mode. To Productionize it you need to navigate to ```config/docker/entrypoint.sh``` and add your Precompile logics etc there.
+
+# DO NOT RUN THIS APPLICATION IN NORMAL MODE.
