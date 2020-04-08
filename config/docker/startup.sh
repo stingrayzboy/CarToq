@@ -12,9 +12,8 @@ rm /app/tmp/pids/server.pid
 
 echo "Removed Previous Process"
 
-# If the database exists, migrate. Otherwise setup (create and migrate)
-
-bundle exec rake db:migrate 2>/dev/null || bundle exec rake db:create db:migrate db:seed
+# If the database exists, migrate. Otherwise setup (create and migrate) 
+rails db:migrate 2>/dev/null || rails db:create db:migrate db:seed
 echo "Done!"
 
 # Precompile assets for production
