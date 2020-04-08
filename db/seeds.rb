@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'csv'
+vehicles = []
+CSV.foreach(Rails.root + 'db/vehicles_list_2.csv', headers: true) do |row|
+  vehicles << row.to_h.transform_keys(&:downcase).transform_keys { |k| k.gsub(' ', '_') }.transform_keys(&:to_sym)
+end
+locations = vehicles.map do |attrs|
+  Vehicle.new(attrs)
+end
+Vehicle.import locations
