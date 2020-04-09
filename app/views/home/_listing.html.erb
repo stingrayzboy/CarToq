@@ -1,0 +1,22 @@
+<h1>Listing Vehicles</h1>
+<div id="listing">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col" class="w-2"><%= sort_link(@q, :id, "#",{} ,remote: true) %></th>
+				<th scope="col" class="w-5"><%= sort_link(@q, :make, "Make", {},remote: true) %></th>
+				<th scope="col" class="w-10"><%= sort_link(@q, :model, "Model", {},remote: true) %></th>
+				<th scope="col" class="w-10"><%= sort_link(@q, :series, "Series", {},remote: true) %></th>
+				<th scope="col" class="w-5"><%= sort_link(@q, :year, "Year", {},remote: true) %></th>
+				<th scope="col" class="w-8"><%= sort_link(@q, :price, "Price", {},remote: true) %></th>
+				<th scope="col" class="w-25"><%= sort_link(@q, :body, "Body", {},remote: true) %></th>
+				<th scope="col" class="w-10"><%= sort_link(@q, :mileage, "Mileage", {},remote: true) %></th>
+				<th scope="col" class="w-10"><%= sort_link(@q, :extreior, "Exterior", {},remote: true) %></th>
+			</tr>
+		</thead>
+		<tbody>
+			<%= render @vehicles%>
+		</tbody>
+	</table>
+</div>
+<%= paginate @vehicles, remote:true%>
