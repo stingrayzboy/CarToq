@@ -66,4 +66,4 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /db/vehicles_list_1.csv
-/db/vehicles_list_2.csv
+
