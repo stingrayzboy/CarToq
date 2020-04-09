@@ -1,9 +1,9 @@
 <h1>Listing Vehicles</h1>
 <%= search_form_for @search, remote:true do |f|%>
 	<%= f.condition_fields do |c|%>
-		<div class="field">
+		<div class="form-group">
 			<%= c.attribute_fields do |a|%>
-				<%= a.attribute_select %>
+				<%= a.attribute_select%>
 			<%end%>
 			<%= c.predicate_select %>
 			<%= c.value_fields do |v|%>
@@ -33,3 +33,9 @@
 	</table>
 </div>
 <%= paginate @vehicles, remote:true%>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).find('select').attr('class','form-control').css('width','30%').css('display','inline');
+		$(document).find('input').attr('class','form-control').css('width','39%').css('display','inline');
+	});
+</script>
