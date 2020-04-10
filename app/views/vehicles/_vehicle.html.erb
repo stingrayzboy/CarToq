@@ -1,5 +1,6 @@
 <tr>
 	<th scope="row"><%=vehicle.id%></th>
+	<td><%=link_to vehicle.vin,show_path(vehicle.id),remote:true%></td>
 	<td><%=vehicle.make%></td>
 	<td><%=vehicle.model%></td>
 	<td><%=vehicle.series%></td>
@@ -8,4 +9,5 @@
 	<td><%=vehicle.body%></td>
 	<td><%=vehicle.mileage%></td>
 	<td><%=vehicle.exterior%></td>
+
 </tr>

@@ -17,6 +17,7 @@
 		<thead>
 			<tr>
 				<th scope="col" style="width:3%"><%= sort_link(@search, :id, "#",{} ,remote: true) %></th>
+				<th scope="col" style="width:10%"><%= sort_link(@search, :vin, "VIN/Open", {},remote: true) %></th>
 				<th scope="col" style="width:10%"><%= sort_link(@search, :make, "Make", {},remote: true) %></th>
 				<th scope="col" style="width:20%"><%= sort_link(@search, :model, "Model", {},remote: true) %></th>
 				<th scope="col" style="width:15%"><%= sort_link(@search, :series, "Series", {},remote: true) %></th>

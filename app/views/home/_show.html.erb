@@ -1,0 +1,148 @@
+<style type="text/css">
+	.gallery-wrap .img-big-wrap img {
+		height: 450px;
+		width: auto;
+		display: inline-block;
+		cursor: zoom-in;
+	}
+
+
+	.gallery-wrap .img-small-wrap .item-gallery {
+		width: 60px;
+		height: 60px;
+		border: 1px solid #ddd;
+		margin: 7px 2px;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.gallery-wrap .img-small-wrap {
+		text-align: center;
+	}
+	.gallery-wrap .img-small-wrap img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		border-radius: 4px;
+		cursor: zoom-in;
+	}
+	iframe {
+		display: block;
+		background: #000;
+		border: none;
+		height: calc(100vh - 30px);
+		width: 100%;
+	}
+</style>
+<div class="card">
+	<div class="row">
+		<aside class="col-sm-7 border-right">
+			<article class="gallery-wrap"> 
+				<iframe src="<%=@vehicle.condition_report%>"></iframe>
+			</article> 
+		</aside>
+		<aside class="col-sm-5">
+			<article class="card-body p-5">
+				<h3 class="title mb-3"><%="#{@vehicle.year} #{@vehicle.make} #{@vehicle.model} #{@vehicle.series}"%></h3>
+
+				<p class="price-detail-wrap"> 
+					<span class="price h3 text-warning"> 
+						<span class="currency">US $</span><span class="num"><%=@vehicle.price%></span>
+					</span> 
+				</p>
+				<dl class="param param-feature">
+					<center><dt>VIN: <%=@vehicle.vin%></dt></center>
+				</dl>
+				<div class="row">
+					<div class="col-sm-6">
+						<dl class="item-property">
+							<dt>Abglocation</dt>
+							<dd><p><%=@vehicle.abglocation%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Stock Number</dt>
+							<dd><p><%=@vehicle.stocknumber.nil? ? "Not Available" : @vehicle.stocknumber%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Interior Color</dt>
+							<dd><p><%=@vehicle.interior%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Body Type</dt>
+							<dd><p><%=@vehicle.body%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Drive Train</dt>
+							<dd><p><%=@vehicle.drive_train%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Cylinders</dt>
+							<dd><p><%=@vehicle.cylinders == 0 ? "Not Available" : @vehicle.cylinders%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Displacement</dt>
+							<dd><p><%=@vehicle.displacement%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>End Date</dt>
+							<dd><p><%=@vehicle.enddate.nil? ? "Not Available" : @vehicle.enddate%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Buyer Name</dt>
+							<dd><p><%=@vehicle.buyername.nil? ? "Not Available" : @vehicle.buyername%></p></dd>
+						</dl>
+						
+					</div>
+					<div class="col-sm-6">
+						<dl class="item-property">
+							<dt>Mileage</dt>
+							<dd><p><%=@vehicle.mileage%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Upholstery</dt>
+							<dd><p><%=@vehicle.upholstery%></p></dd>
+						</dl>
+
+						<dl class="param param-feature">
+							<dt>Exterior Color</dt>
+							<dd><%= @vehicle.exterior%></dd>
+						</dl>
+						<dl class="param param-feature">
+							<dt>Grade</dt>
+							<dd><%= @vehicle.grade.nil? ? "Not Available" : @vehicle.grade %></dd>
+						</dl>
+						<dl class="param param-feature">
+							<dt>Transmission</dt>
+							<dd><%= @vehicle.transmission%></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Buy Date</dt>
+							<dd><p><%=@vehicle.buydate.nil? ? "Not Available" : @vehicle.buydate%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Watched By</dt>
+							<dd><p><%=@vehicle.watchedby.nil? ? "Not Available" : @vehicle.watchedby%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Dealership</dt>
+							<dd><p><%=@vehicle.dealershipname.nil? ? "Not Available" : @vehicle.dealershipname%></p></dd>
+						</dl>
+						<dl class="item-property">
+							<dt>Sales Representative</dt>
+							<dd><p><%=@vehicle.sales_rep.nil? ? "Not Available" : @vehicle.sales_rep%></p></dd>
+						</dl>
+					</div>
+				</div> 
+
+
+				<hr>
+				
+			</article>
+		</aside>
+	</div> 
+</div>
+
+
+</div>
+<!--container.//-->
+</article>
