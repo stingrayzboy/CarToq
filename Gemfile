@@ -26,7 +26,7 @@ gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'ransack'
-
+gem 'platipus', '~> 0.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

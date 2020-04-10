@@ -12,6 +12,9 @@ rm /app/tmp/pids/server.pid
 
 echo "Removed Previous Process"
 
+echo "Installing/Updating Gems"
+bundle update
+
 # If the database exists, migrate. Otherwise setup (create and migrate) 
 rails db:migrate 2>/dev/null || rails db:create db:migrate db:seed
 echo "Done!"
